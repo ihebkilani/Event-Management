@@ -1,0 +1,53 @@
+
+<section id="intro">
+    <div class="intro-container wow fadeIn" style="background-image: url('../assets/img/intro-bg.jpg')">
+      <h1 class="mb-4 pb-0" style="color:#0b1534"><br><span>SH EVENT</span><br><p>The best way to manage your event.</p></h1>
+
+    </div>
+  </section>
+
+
+    <section id="schedule" class="section-with-bg" >
+        <div class="container wow fadeInUp">
+          <div class="section-header">
+            <h2>Feedbacks</h2>
+
+          </div>
+  
+
+  
+          <div class="tab-content row justify-content-center">
+  
+            <!-- Schdule Day 1 -->
+            <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+  
+              <div class="row schedule-item" *ngFor="let model of aviss">
+                <div class="col-md-2"></div>
+                <div class="col-md-10" >
+                    <div class="speaker">
+                        <img src="../assets/img/speakers/5.jpg" alt="Alejandrin Littel">
+                      </div>
+                  <h4>{{model.username}}</h4>
+                  <p>{{model.commentaire}}</p>
+                </div>
+              </div>
+  
+              
+  
+            </div>
+            <!-- End Schdule Day 1 -->
+  
+            <!-- Schdule Day 2 -->
+
+  
+            <!-- Schdule Day 3 -->
+            
+  
+            </div>
+            <!-- End Schdule Day 2 -->
+  
+          </div>
+
+  
+      </section>
+  

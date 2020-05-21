@@ -1,0 +1,103 @@
+
+ <!--==========================
+      Speakers Section
+    ============================-->
+    <section id="speakers" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Feedbacks</h2>
+  
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img src="../assets/img/speakers/3.jpg" alt="Speaker 1" class="img-fluid">
+                <div class="details">
+                  <h3><a href="speaker-details.html">{{ aviss[0].username }}</a></h3>
+                  <p>{{ aviss[0].commentaire }}</p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                <div class="col-lg-4 col-md-6">
+                  <div class="speaker">
+                    <img src="../assets/img/gallery/8.jpg" alt="Speaker 1" class="img-fluid">
+                    <div class="details">
+                      <h3><a href="speaker-details.html">{{ aviss[1].username }}</a></h3>
+                      <p>{{ aviss[1].commentaire }}</p>
+                      <div class="social">
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-google-plus"></i></a>
+                        <a href=""><i class="fa fa-linkedin"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+
+           
+                    <div class="col-lg-4 col-md-6">
+                      <div class="speaker">
+                        <img src="../assets/img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
+                        <div class="details">
+                          <h3><a href="speaker-details.html">{{ aviss[2].username }}</a></h3>
+                          <p>{{ aviss[2].commentaire }}</p>
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+
+
+          </div>
+ 
+        </div>
+   
+        <div class="col-auto" routerLinkActive="active">
+            <a  href="listAvis">See More</a></div> 
+      </section>
+  
+
+
+
+
+  <section id="subscribe" *ngIf="authority === 'user'">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2>feedback</h2>
+          <p>Feel free to give your feedback.</p>
+        </div>
+
+        <form method="POST" action="#">
+          <div class="form-row justify-content-center">
+            <div class="col-auto">
+              <input type="text" [(ngModel)]="avis.commentaire" name="commentaire" id="commentaire" class="form-control" placeholder="Enter your comment here">
+            </div>
+            <div class="col-auto">
+              <button (click)="addAvis(avis)" type="submit">Publish</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+
+
+
+
+

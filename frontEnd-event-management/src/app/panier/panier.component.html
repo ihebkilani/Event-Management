@@ -1,0 +1,31 @@
+<section id="intro"  style="height:100px">
+
+  </section>
+    
+    <section id="hotels" class="section-with-bg wow fadeInUp">
+
+        <div class="container">
+          <div class="section-header">
+            <h2>My Events</h2>
+         
+          </div>
+  
+          <div class="row">
+  
+            <div class="col-lg-4 col-md-6" *ngFor="let model of events">
+              <div class="hotel">
+                <div class="hotel-img">
+                  <img src="../assets/img/event.jpg" alt="Hotel 1" class="img-fluid">
+                </div>
+                <h3><a href="#">{{model.name}}</a></h3>
+
+                <p>{{model.description}}</p>
+              </div>
+            </div>
+  
+            
+  
+          </div>
+        </div>
+  
+      </section>

@@ -1,0 +1,81 @@
+<section id="intro">
+    <div class="intro-container wow fadeIn" style="background-image: url('../assets/img/login.jpeg')">
+      <h1 class="mb-4 pb-0" style="color:#0b1534">JOIN<br><span>SH EVENT</span><br><p style="color:#0b1534">The best way to manage your event.</p></h1>
+
+    </div>
+  </section>
+
+
+<section id="contact" class="section-bg wow fadeInUp">
+
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Create your personal account</h2>
+      <div *ngIf="isLoggedIn; else loggedOut">
+        Logged in as {{roles}}.
+      </div>
+    </div>
+
+    <div class="row contact-info">
+
+
+
+    </div>
+
+    <div class="form">
+      <form action="" method="post" role="form" class="contactForm" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="form-row">
+            <div class="form-group col-md-3"></div>
+            <div class="form-group col-md-6">
+              
+                <input type="test" class="form-control" name="name" [(ngModel)]="form.name" #username="ngModel" required placeholder="Your Name" />
+                <div *ngIf="f.submitted && name.invalid">
+                    <div *ngIf="name.errors.required">Name is required</div>
+                  </div>
+                <div class="validation"></div>
+              </div>
+          <div class="form-group col-md-3"></div>
+          <div class="form-group col-md-3"></div>
+          <div class="form-group col-md-6">
+              
+              <input type="test" class="form-control" name="username" [(ngModel)]="form.username" #username="ngModel" required placeholder="Your Username" />
+              <div *ngIf="f.submitted && username.invalid">
+                  <div *ngIf="username.errors.required">Username is required</div>
+                </div>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group col-md-3"></div>
+            <div class="form-group col-md-3"></div>
+            <div class="form-group col-md-6">
+              
+                <input type="email" class="form-control" name="email" [(ngModel)]="form.email" #email="ngModel" required placeholder="Your E-mail" />
+                <div *ngIf="f.submitted && email.invalid">
+                    <div *ngIf="email.errors.required">Email is required</div>
+                    <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                  </div>
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-3"></div>
+              <div class="form-group col-md-3"></div>    
+              <div class="form-group col-md-6">        
+            <input type="password"  name="password" [(ngModel)]="form.password" #password="ngModel" required minlength="6"  class="form-control" placeholder="Your Password"   />
+            <div class="validation"></div>
+            <div *ngIf="f.submitted && password.invalid">
+                <div *ngIf="password.errors.required">Password is required</div>
+                <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+          </div>
+
+        </div>
+        <br>
+        <div class="text-center"><button type="submit">Register</button></div>
+        <div *ngIf="f.submitted && isSignUpFailed" class="alert alert-warning">
+            Signup failed!<br/>{{errorMessage}}
+          </div>
+
+        </form><br><br>
+    </div>
+
+  </div>
+</section>

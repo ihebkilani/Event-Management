@@ -1,0 +1,28 @@
+<header id="header">
+  <div class="container">
+
+    <div id="logo" class="pull-left">
+      <!-- Uncomment below if you prefer to use a text logo -->
+      <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+      <a routerLink="home" class="scrollto"><img src="../assets/img/logo.png" alt="" title=""></a>
+    </div>
+
+    <nav id="nav-menu-container">
+      <ul class="nav-menu" routerLinkActive="active">
+        <li class="menu-active"><a  routerLink="home">Home</a></li>
+        <li><a href="home#about">About</a></li>
+        <li *ngIf="authority === 'admin'"><a href="#speakers" routerLink="listUser" >List users</a></li>
+        <li><a href="home#contact">Contact</a></li>
+        <li *ngIf="!authority" ><a href="#contact" routerLink="auth/login">Sign in</a></li>
+        <li *ngIf="!authority" ><a href="#contact" routerLink="listUser">Sign in</a></li>
+        <li *ngIf="authority === 'user'" ><a  routerLink="event"><strong>+</strong> Create Event</a> </li>
+        <li *ngIf="authority === 'user'" ><a  routerLink="panier">Cart</a> <i > <img src="../assets/img/panier.png" style="width:26px;height:26px" /></i></li>
+        <li class="buy-tickets"  *ngIf="authority" ><a href="home" (click)="logout()">Sign out</a></li>
+        <li class="buy-tickets" *ngIf="!authority"  ><a href="signup">Sign up</a></li>
+      </ul>
+    </nav><!-- #nav-menu-container -->
+  </div>
+</header><!-- #header -->
+
+
+
