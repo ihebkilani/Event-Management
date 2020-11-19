@@ -7,8 +7,8 @@ EventSH is a complete event experience web platform that covers the entire lifec
 
 This web application is developed from scratch :
 
-   *Backend : Spring Boot 2.X
-   *Frontend : Angular 7.x and Bootstrap
+   * BackEnd : Spring Boot 2.x
+   * FrontEnd : Angular 7.x and Bootstrap
 
 
 ## Author
