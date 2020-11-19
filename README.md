@@ -11,7 +11,7 @@ This web application is developed from scratch :
    * FrontEnd : Angular 7.x and Bootstrap
 
 
-## Author
+## Authors
 
 👤 **Iheb KILANI**
 
